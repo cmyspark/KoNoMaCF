@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한-북마리아나 문화재단 | KOREA-NORTHERN MARIANAS CULTURAL FOUNDATION</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* ==================== 1. NATURE & MODERN COLOR PALETTE ==================== */
+    :root {
+      --bg-light: #F9F9F6;          /* 밝은 아이보리 / 오프화이트 */
+      --bg-white: #FFFFFF;          /* 순백색 카드 배경 */
+      --primary-green: #1B4332;      /* 세련된 포레스트 그린 */
+      --primary-green-light: #2D6A4F;/* 부드러운 그린 포인트 */
+      --accent-gold: #C5A059;       /* 샌드 골드 (품격있는 어센트) */
+      --accent-soft-green: #E8F0EC; /* 연한 그린 베이지 배경 */
+      --text-main: #1D2D24;         /* 짙은 차콜 그린 (가독성 높은 텍스트) */
+      --text-muted: #5C6B61;        /* 소프트 내추럴 그레이 */
+      --border-color: #E2E8E4;      /* 은은한 자연 경계선 */
+      --shadow-sm: 0 4px 20px rgba(27, 67, 50, 0.05);
+      --shadow-md: 0 12px 30px rgba(27, 67, 50, 0.08);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ==================== 2. HEADER & NAVIGATION ==================== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.2rem 6%;
+      background: rgba(249, 249, 246, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: var(--transition);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+      color: var(--primary-green);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--primary-green);
+      color: var(--bg-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .logo span {
+      color: var(--accent-gold);
+      font-size: 0.8rem;
+      font-weight: 500;
+      display: block;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2.2rem;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+
+    .lang-toggle {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      color: var(--primary-green);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-toggle:hover {
+      border-color: var(--primary-green);
+      background: var(--accent-soft-green);
+    }
+
+    /* ==================== 3. HERO SECTION ==================== */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9rem 6% 5rem;
+      position: relative;
+      background: radial-gradient(circle at 50% 30%, #EBF3EE 0%, var(--bg-light) 70%);
+    }
+
+    .hero-content {
+      max-width: 920px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0.4rem 1.2rem;
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      color: var(--primary-green);
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .badge i {
+      color: var(--accent-gold);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 1.5rem;
+      color: var(--primary-green);
+      word-break: keep-all;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      word-break: keep-all;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 0.85rem 2.2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: var(--primary-green);
+      color: var(--bg-white);
+      box-shadow: 0 8px 20px rgba(27, 67, 50, 0.15);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-green-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(27, 67, 50, 0.25);
+    }
+
+    .btn-secondary {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-soft-green);
+      border-color: var(--primary-green);
+    }
+
+    /* ==================== 4. SECTION COMMON ==================== */
+    section {
+      padding: 7rem 6%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title p {
+      color: var(--accent-gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-green);
+    }
+
+    /* ==================== 5. ABOUT SECTION ==================== */
+    .about-card {
+      background: var(--bg-white);
+      padding: 3.5rem;
+      border-radius: 24px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .about-card::before {
+      content: '"';
+      font-family: Georgia, serif;
+      font-size: 6rem;
+      color: var(--accent-soft-green);
+      position: absolute;
+      top: 10px;
+      left: 30px;
+      line-height: 1;
+    }
+
+    .about-card p {
+      font-size: 1.15rem;
+      line-height: 1.85;
+      color: var(--text-main);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==================== 6. PROGRAMS (GRID) ==================== */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      padding: 2.2rem;
+      border-radius: 20px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-green-light);
+    }
+
+    .card-icon {
+      width: 54px;
+      height: 54px;
+      background: var(--accent-soft-green);
+      color: var(--primary-green);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary-green);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* ==================== 7. NEWS SECTION (새 메뉴) ==================== */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .news-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .news-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .news-date {
+      font-size: 0.85rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .news-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .news-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .news-link {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--primary-green);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .news-link:hover {
+      color: var(--accent-gold);
+      gap: 10px;
+    }
+
+    /* ==================== 8. GOVERNANCE ==================== */
+    .leadership-box {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 3.5rem;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+    }
+
+    .leader-group h4 {
+      color: var(--primary-green);
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--accent-soft-green);
+      padding-bottom: 0.6rem;
+    }
+
+    .leader-list {
+      list-style: none;
+    }
+
+    .leader-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.85rem 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .leader-list .role {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .leader-list .name {
+      font-weight: 600;
+      color: var(--primary-green);
+    }
+
+    /* ==================== 9. FOOTER ==================== */
+    footer {
+      background: #142E23; /* 깊고 따뜻한 딥 그린 */
+      color: #E2E8E4;
+      padding: 5rem 6% 2.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-info h3 {
+      font-size: 1.15rem;
+      color: var(--bg-white);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-info p {
+      color: #A3B8AC;
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .footer-info p strong {
+      color: #FFFFFF;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      color: #7E9688;
+      font-size: 0.85rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* ==================== 10. RESPONSIVE ==================== */
+    @media (max-width: 868px) {
+      nav { display: none; }
+      .leadership-box { grid-template-columns: 1fr; gap: 2.5rem; padding: 2rem; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-card { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
+      <div>
+        KMCF
+        <span id="logo-sub">한-북마리아나 문화재단</span>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about" class="lang-text" data-kr="재단 소개" data-en="About">재단 소개</a></li>
+        <li><a href="#programs" class="lang-text" data-kr="주요 사업" data-en="Programs">주요 사업</a></li>
+        <li><a href="#news" class="lang-text" data-kr="새로운 소식" data-en="News">새로운 소식</a></li>
+        <li><a href="#leadership" class="lang-text" data-kr="조직 구성" data-en="Leadership">조직 구성</a></li>
+        <li><a href="#contact" class="lang-text" data-kr="연락처" data-en="Contact">연락처</a></li>
+      </ul>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLanguage()">
+      <i class="fa-solid fa-globe"></i> <span id="lang-btn-text">English</span>
+    </button>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="badge">
+        <i class="fa-solid fa-certificate"></i>
+        <span>CNMI Official Non-Profit Corporation</span>
+      </div>
+      <h1 class="lang-text" 
+          data-kr="자연과 문화가 호흡하는 교류의 장을 만듭니다" 
+          data-en="Fostering Cultural Harmony Between Korea & Northern Mariana Islands">
+        자연과 문화가 호흡하는 교류의 장을 만듭니다
+      </h1>
+      <p class="lang-text" 
+         data-kr="한-북마리아나 문화재단은 사회·문화적 연대감을 조성하고, 전통과 현대 예술의 가치를 보존하며 함께 성장하기 위해 설립된 공익 법인입니다." 
+         data-en="A dedicated non-profit organization fostering socio-cultural solidarity, preserving traditional heritage, and promoting sustainable partnerships between South Korea and CNMI.">
+        한-북마리아나 문화재단은 사회·문화적 연대감을 조성하고, 전통과 현대 예술의 가치를 보존하며 함께 성장하기 위해 설립된 공익 법인입니다.
+      </p>
+      <div class="cta-buttons">
+        <a href="#about" class="btn btn-primary lang-text" data-kr="재단 소개 보기" data-en="About Us">재단 소개 보기</a>
+        <a href="#news" class="btn btn-secondary lang-text" data-kr="최신 소식 확인" data-en="Latest News">최신 소식 확인</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="section-title">
+      <p>ABOUT FOUNDATION</p>
+      <h2 class="lang-text" data-kr="설립 목적 및 미션" data-en="Purpose & Mission">설립 목적 및 미션</h2>
+    </div>
+    <div class="about-card">
+      <p class="lang-text" 
+         data-kr="본 재단은 대한민국과 북마리아나 제도 간의 지속 가능한 문화 파트너십을 구축합니다. 양국의 풍부한 전통문화 유산을 공유하고 현대 예술 분야에서의 협력을 활성화하여 상호 간의 유대를 강화하고 다양성의 가치를 다집니다."
+         data-en="We establish sustainable cultural partnerships between Korea and the Northern Mariana Islands. By sharing rich traditional heritage and encouraging cooperation in contemporary arts, we strengthen mutual bonds and honor cultural diversity.">
+        본 재단은 대한민국과 북마리아나 제도 간의 지속 가능한 문화 파트너십을 구축합니다. 양국의 풍부한 전통문화 유산을 공유하고 현대 예술 분야에서의 협력을 활성화하여 상호 간의 유대를 강화하고 다양성의 가치를 다집니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROGRAMS SECTION -->
+  <section id="programs">
+    <div class="section-title">
+      <p>KEY FOCUS AREAS</p>
+      <h2 class="lang-text" data-kr="주요 사업 분야" data-en="Our Key Programs">주요 사업 분야</h2>
+    </div>
+    <div class="grid-container">
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-people-hold"></i></div>
+        <h3 class="lang-text" data-kr="사회·문화 교류" data-en="Socio-Cultural Exchange">사회·문화 교류</h3>
+        <p class="lang-text" 
+           data-kr="양 지역 간 다양한 전통 및 현대 문화 교류 프로그램을 통해 공감대를 지속 확장합니다." 
+           data-en="Expanding mutual understanding through various traditional and modern cultural exchange programs.">
+          양 지역 간 다양한 전통 및 현대 문화 교류 프로그램을 통해 공감대를 지속 확장합니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+        <h3 class="lang-text" data-kr="전통 공예 및 기술" data-en="Traditional Crafts">전통 공예 및 기술</h3>
+        <p class="lang-text" 
+           data-kr="고유 전통 공예 기법과 기술을 공유하고 이를 후세에 보존·전승하기 위한 기반을 다집니다." 
+           data-en="Preserving and passing down unique craft skills and heritage to future generations.">
+          고유 전통 공예 기법과 기술을 공유하고 이를 후세에 보존·전승하기 위한 기반을 다집니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-campground"></i></div>
+        <h3 class="lang-text" data-kr="공동 프로젝트" data-en="Joint Projects">공동 프로젝트</h3>
+        <p class="lang-text" 
+           data-kr="합동 전시회, 공연, 문화 축제 등을 개최하여 다채로운 연대와 협력의 장을 마련합니다." 
+           data-en="Creating collaborative platforms through joint exhibitions, performances, and festivals.">
+          합동 전시회, 공연, 문화 축제 등을 개최하여 다채로운 연대와 협력의 장을 마련합니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fa-solid fa-newspaper"></i></div>
+        <h3 class="lang-text" data-kr="포럼 및 미디어" data-en="Forums & Media">포럼 및 미디어</h3>
+        <p class="lang-text" 
+           data-kr="학술 포럼을 운영하고 양국의 문화 소식을 신속히 전하는 온라인 채널을 발행합니다." 
+           data-en="Hosting academic forums and publishing digital media channels to share cultural news.">
+          학술 포럼을 운영하고 양국의 문화 소식을 신속히 전하는 온라인 채널을 발행합니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS SECTION (새로 추가된 메뉴) -->
+  <section id="news" style="background: var(--accent-soft-green); max-width: 100%; padding: 7rem 6%;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="section-title">
+        <p>LATEST UPDATES</p>
+        <h2 class="lang-text" data-kr="새로운 소식" data-en="News & Announcements">새로운 소식</h2>
+      </div>
+      
+      <div class="news-grid">
+        <!-- 뉴스 카드 1 -->
+        <div class="news-card">
+          <div>
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> 2026.06.30</div>
+            <h3 class="news-title lang-text" 
+                data-kr="한-북마리아나 문화재단 한국 지사 설립 이사회 결의 완료" 
+                data-en="Korea Branch Office Board Resolution Approved">
+              한-북마리아나 문화재단 한국 지사 설립 이사회 결의 완료
+            </h3>
+            <p class="news-desc lang-text" 
+               data-kr="경기도 파주시에 한국 지사를 공식 개설하고 활발한 양국 문화 교류 프로젝트를 추진합니다." 
+               data-en="Official inauguration of the Korea Branch Office in Paju to drive vibrant bilateral cultural projects.">
+              경기도 파주시에 한국 지사를 공식 개설하고 활발한 양국 문화 교류 프로젝트를 추진합니다.
+            </p>
+          </div>
+          <a href="#" class="news-link lang-text" data-kr="자세히 보기 →" data-en="Read More →">자세히 보기 →</a>
+        </div>
+
+        <!-- 뉴스 카드 2 -->
+        <div class="news-card">
+          <div>
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> 2026.06.26</div>
+            <h3 class="news-title lang-text" 
+                data-kr="북마리아나 제도 정부 공식 등록 및 등기 승인" 
+                data-en="Official Registration Approved by CNMI Government">
+              북마리아나 제도 정부 공식 등록 및 등기 승인
+            </h3>
+            <p class="news-desc lang-text" 
+               data-kr="CNMI 상무부(Department of Commerce)에 공익 비영리 법인 등록절차가 최종 수리되었습니다." 
+               data-en="Non-profit corporate registration successfully filed with CNMI Department of Commerce.">
+              CNMI 상무부(Department of Commerce)에 공익 비영리 법인 등록절차가 최종 수리되었습니다.
+            </p>
+          </div>
+          <a href="#" class="news-link lang-text" data-kr="자세히 보기 →" data-en="Read More →">자세히 보기 →</a>
+        </div>
+
+        <!-- 뉴스 카드 3 -->
+        <div class="news-card">
+          <div>
+            <div class="news-date"><i class="fa-regular fa-calendar"></i> 2026.06.25</div>
+            <h3 class="news-title lang-text" 
+                data-kr="양국 전통 공예가 네트워킹 포럼 개최 예정" 
+                data-en="Upcoming Traditional Craftsmen Forum">
+              양국 전통 공예가 네트워킹 포럼 개최 예정
+            </h3>
+            <p class="news-desc lang-text" 
+               data-kr="한국과 사이판의 주요 공예 예술가들이 참여하는 상호 교류 포럼이 기획 중입니다." 
+               data-en="An interactive forum bringing together prominent craftsmen from Korea and Saipan is under planning.">
+              한국과 사이판의 주요 공예 예술가들이 참여하는 상호 교류 포럼이 기획 중입니다.
+            </p>
+          </div>
+          <a href="#" class="news-link lang-text" data-kr="자세히 보기 →" data-en="Read More →">자세히 보기 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP SECTION -->
+  <section id="leadership">
+    <div class="section-title">
+      <p>GOVERNANCE</p>
+      <h2 class="lang-text" data-kr="조직 및 임원진" data-en="Board & Leadership">조직 및 임원진</h2>
+    </div>
+    <div class="leadership-box">
+      <div class="leader-group">
+        <h4 class="lang-text" data-kr="주요 임원 (Executive Officers)" data-en="Executive Officers">주요 임원 (Executive Officers)</h4>
+        <ul class="leader-list">
+          <li><span class="role lang-text" data-kr="회장 (President)" data-en="President">회장 (President)</span> <span class="name">KIM JAY</span></li>
+          <li><span class="role lang-text" data-kr="부회장 (Vice President)" data-en="Vice President">부회장 (Vice President)</span> <span class="name">PARK YOUNGSU</span></li>
+          <li><span class="role lang-text" data-kr="서기 (Secretary)" data-en="Secretary">서기 (Secretary)</span> <span class="name">ISIDRO K. SEMAN</span></li>
+          <li><span class="role lang-text" data-kr="재무 (Treasurer)" data-en="Treasurer">재무 (Treasurer)</span> <span class="name">SEO JUNGHEE</span></li>
+        </ul>
+      </div>
+      <div class="leader-group">
+        <h4 class="lang-text" data-kr="이사진 (Board of Directors)" data-en="Board of Directors">이사진 (Board of Directors)</h4>
+        <ul class="leader-list">
+          <li><span class="role">Director</span> <span class="name">KIM JAY</span></li>
+          <li><span class="role">Director</span> <span class="name">ISIDRO K. SEMAN</span></li>
+          <li><span class="role">Director</span> <span class="name">PARK CHEOLMIN</span></li>
+          <li><span class="role">Director</span> <span class="name">PARK YOUNGSU</span></li>
+          <li><span class="role">Director</span> <span class="name">PARK JIWON</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-info">
+        <h3>KOREA-NORTHERN MARIANAS CULTURAL FOUNDATION INC.</h3>
+        <p style="margin-top: 1rem;"><strong>Saipan HQ:</strong> HR 71 PAPAGO SAIPAN, CNMI U.S.A.</p>
+        <p><strong>Mailing:</strong> PMB A-46 BOX 10001 SAIPAN MP96950</p>
+        <p><strong>Korea Branch:</strong> 경기도 파주시 패랭이길 80 (동패동)</p>
+      </div>
+      <div class="footer-info">
+        <h3 class="lang-text" data-kr="연락처 정보" data-en="Contact Info">연락처 정보</h3>
+        <p><i class="fa-solid fa-phone" style="margin-right:8px;"></i> +1 (670) 287-6788</p>
+        <p><i class="fa-solid fa-envelope" style="margin-right:8px;"></i> CNMIFOUNDATION@GMAIL.COM</p>
+      </div>
+      <div class="footer-info">
+        <h3 class="lang-text" data-kr="법인 정보" data-en="Legal Status">법인 정보</h3>
+        <p class="lang-text" data-kr="공익 비영리 법인 (Non-Profit)" data-en="Non-Profit Corporation">공익 비영리 법인 (Non-Profit)</p>
+        <p class="lang-text" data-kr="주 승인 기관: CNMI 상무부" data-en="Jurisdiction: CNMI Dept. of Commerce">주 승인 기관: CNMI 상무부</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 KOREA-NORTHERN MARIANAS CULTURAL FOUNDATION INC. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // 다국어 지원 (한/영 전환)
+    let currentLang = 'kr';
+
+    function toggleLanguage() {
+      const elements = document.querySelectorAll('.lang-text');
+      const langBtnText = document.getElementById('lang-btn-text');
+      const logoSub = document.getElementById('logo-sub');
+
+      if (currentLang === 'kr') {
+        currentLang = 'en';
+        langBtnText.innerText = '한국어';
+        logoSub.innerText = 'Cultural Foundation';
+
+        elements.forEach(el => {
+          if (el.dataset.en) {
+            el.innerText = el.dataset.en;
+          }
+        });
+      } else {
+        currentLang = 'kr';
+        langBtnText.innerText = 'English';
+        logoSub.innerText = '한-북마리아나 문화재단';
+
+        elements.forEach(el => {
+          if (el.dataset.kr) {
+            el.innerText = el.dataset.kr;
+          }
+        });
+      }
+    }
+
+    // Header Scroll Shadow Effect
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 40) {
+        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.06)';
+        header.style.padding = '0.9rem 6%';
+      } else {
+        header.style.boxShadow = 'none';
+        header.style.padding = '1.2rem 6%';
+      }
+    });
+  </script>
+</body>
+</html>
