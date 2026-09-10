@@ -96,7 +96,7 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 2.2rem;
+      gap: 2rem;
     }
 
     nav a {
@@ -134,7 +134,7 @@
 
     /* ==================== 3. HERO SECTION ==================== */
     .hero {
-      min-height: 92vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -227,14 +227,14 @@
 
     /* ==================== 4. SECTION COMMON ==================== */
     section {
-      padding: 7rem 6%;
+      padding: 6rem 6%;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
     }
 
     .section-title p {
@@ -252,7 +252,152 @@
       color: var(--primary-green);
     }
 
-    /* ==================== 5. ABOUT SECTION ==================== */
+    /* ==================== 5. CNMI INTRO SECTION (새로 추가) ==================== */
+    .cnmi-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .cnmi-intro-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cnmi-intro-card h3 {
+      font-size: 1.35rem;
+      color: var(--primary-green);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .cnmi-intro-card p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      font-size: 0.98rem;
+    }
+
+    .cnmi-facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .fact-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .fact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .fact-icon {
+      font-size: 1.4rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .fact-card h4 {
+      font-size: 1rem;
+      color: var(--primary-green);
+      margin-bottom: 0.4rem;
+    }
+
+    .fact-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==================== 6. EXTERNAL LINKS SECTION (새로 추가) ==================== */
+    .external-links-section {
+      background: var(--accent-soft-green);
+      border-radius: 24px;
+      padding: 3.5rem 3rem;
+      margin-top: 2rem;
+    }
+
+    .external-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .ext-link-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      padding: 1.8rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ext-link-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-green);
+    }
+
+    .ext-link-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 0.8rem;
+    }
+
+    .ext-link-header i {
+      font-size: 1.4rem;
+      color: var(--primary-green);
+    }
+
+    .ext-link-header h4 {
+      font-size: 1.1rem;
+      color: var(--primary-green);
+    }
+
+    .ext-link-card p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .ext-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 0.7rem;
+      background: var(--primary-green);
+      color: var(--bg-white);
+      border-radius: 12px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .ext-btn:hover {
+      background: var(--primary-green-light);
+    }
+
+    /* ==================== 7. ABOUT SECTION ==================== */
     .about-card {
       background: var(--bg-white);
       padding: 3.5rem;
@@ -284,7 +429,7 @@
       z-index: 1;
     }
 
-    /* ==================== 6. PROGRAMS (GRID) ==================== */
+    /* ==================== 8. PROGRAMS (GRID) ==================== */
     .grid-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -331,7 +476,7 @@
       line-height: 1.6;
     }
 
-    /* ==================== 7. NEWS SECTION (새 메뉴) ==================== */
+    /* ==================== 9. NEWS SECTION ==================== */
     .news-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -395,7 +540,7 @@
       gap: 10px;
     }
 
-    /* ==================== 8. GOVERNANCE ==================== */
+    /* ==================== 10. GOVERNANCE ==================== */
     .leadership-box {
       background: var(--bg-white);
       border: 1px solid var(--border-color);
@@ -436,9 +581,9 @@
       color: var(--primary-green);
     }
 
-    /* ==================== 9. FOOTER ==================== */
+    /* ==================== 11. FOOTER ==================== */
     footer {
-      background: #142E23; /* 깊고 따뜻한 딥 그린 */
+      background: #142E23;
       color: #E2E8E4;
       padding: 5rem 6% 2.5rem;
       margin-top: 4rem;
@@ -480,12 +625,14 @@
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* ==================== 10. RESPONSIVE ==================== */
+    /* ==================== 12. RESPONSIVE ==================== */
     @media (max-width: 868px) {
       nav { display: none; }
+      .cnmi-info-grid { grid-template-columns: 1fr; }
       .leadership-box { grid-template-columns: 1fr; gap: 2.5rem; padding: 2rem; }
       .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .about-card { padding: 2rem; }
+      .external-links-section { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
@@ -503,6 +650,7 @@
     <nav>
       <ul>
         <li><a href="#about" class="lang-text" data-kr="재단 소개" data-en="About">재단 소개</a></li>
+        <li><a href="#cnmi-intro" class="lang-text" data-kr="북마리아나 제도" data-en="Northern Marianas">북마리아나 제도</a></li>
         <li><a href="#programs" class="lang-text" data-kr="주요 사업" data-en="Programs">주요 사업</a></li>
         <li><a href="#news" class="lang-text" data-kr="새로운 소식" data-en="News">새로운 소식</a></li>
         <li><a href="#leadership" class="lang-text" data-kr="조직 구성" data-en="Leadership">조직 구성</a></li>
@@ -532,7 +680,7 @@
         한-북마리아나 문화재단은 사회·문화적 연대감을 조성하고, 전통과 현대 예술의 가치를 보존하며 함께 성장하기 위해 설립된 공익 법인입니다.
       </p>
       <div class="cta-buttons">
-        <a href="#about" class="btn btn-primary lang-text" data-kr="재단 소개 보기" data-en="About Us">재단 소개 보기</a>
+        <a href="#cnmi-intro" class="btn btn-primary lang-text" data-kr="북마리아나 제도 알아보기" data-en="Explore CNMI">북마리아나 제도 알아보기</a>
         <a href="#news" class="btn btn-secondary lang-text" data-kr="최신 소식 확인" data-en="Latest News">최신 소식 확인</a>
       </div>
     </div>
@@ -550,6 +698,125 @@
          data-en="We establish sustainable cultural partnerships between Korea and the Northern Mariana Islands. By sharing rich traditional heritage and encouraging cooperation in contemporary arts, we strengthen mutual bonds and honor cultural diversity.">
         본 재단은 대한민국과 북마리아나 제도 간의 지속 가능한 문화 파트너십을 구축합니다. 양국의 풍부한 전통문화 유산을 공유하고 현대 예술 분야에서의 협력을 활성화하여 상호 간의 유대를 강화하고 다양성의 가치를 다집니다.
       </p>
+    </div>
+  </section>
+
+  <!-- NORTHERN MARIANA ISLANDS INTRODUCTION SECTION (신규 추가) -->
+  <section id="cnmi-intro">
+    <div class="section-title">
+      <p>DESTINATION OVERVIEW</p>
+      <h2 class="lang-text" data-kr="북마리아나 제도 소개" data-en="About Northern Mariana Islands">북마리아나 제도 소개</h2>
+    </div>
+
+    <!-- 소개 글 카드 -->
+    <div class="cnmi-info-grid">
+      <div class="cnmi-intro-card">
+        <h3><i class="fa-solid fa-umbrella-beach"></i> <span class="lang-text" data-kr="태평양의 아름다운 섬 공동체" data-en="Beautiful Pacific Island Community">태평양의 아름다운 섬 공동체</span></h3>
+        <p class="lang-text" 
+           data-kr="북마리아나 제도는 태평양 서쪽 마리아나 제도에 위치한 미국의 해외 자치령(Commonwealth)입니다. 수도인 사이판(Saipan)을 비롯해 티니안(Tinian), 로타(Rota) 등 총 14개의 아름다운 화산성 및 산호섬으로 구성되어 있으며, 맑은 바다와 사계절 온화한 열대 기후를 자랑합니다."
+           data-en="The Northern Mariana Islands is a Commonwealth of the United States located in the western Pacific Ocean. Comprising 14 islands including Saipan, Tinian, and Rota, it is renowned for crystal-clear waters and warm tropical climate year-round.">
+          북마리아나 제도는 태평양 서쪽 마리아나 제도에 위치한 미국의 해외 자치령(Commonwealth)입니다. 수도인 사이판(Saipan)을 비롯해 티니안(Tinian), 로타(Rota) 등 총 14개의 아름다운 화산성 및 산호섬으로 구성되어 있으며, 맑은 바다와 사계절 온화한 열대 기후를 자랑합니다.
+        </p>
+      </div>
+      <div class="cnmi-intro-card">
+        <h3><i class="fa-solid fa-palette"></i> <span class="lang-text" data-kr="역사와 다문화 유산" data-en="History & Cultural Heritage">역사와 다문화 유산</span></h3>
+        <p class="lang-text" 
+           data-kr="원주민인 차모로인(Chamorro)과 캐롤리니안인(Carolinian)의 풍부한 전통문화 가치를 바탕으로, 스페인, 독일, 일본, 미국의 지배를 거치며 형성된 다채로운 역사가 혼재되어 있습니다. 현대에는 전통 예술 보존과 함께 한-북마리아나 간 폭넓은 문화 교류가 이루어지는 중심지입니다."
+           data-en="Grounded in the traditions of indigenous Chamorro and Carolinian peoples, the islands feature a rich cultural tapestry influenced by Spanish, German, Japanese, and American history. Today, it serves as a vibrant hub for cultural exchange.">
+          원주민인 차모로인(Chamorro)과 캐롤리니안인(Carolinian)의 풍부한 전통문화 가치를 바탕으로, 스페인, 독일, 일본, 미국의 지배를 거치며 형성된 다채로운 역사가 혼재되어 있습니다. 현대에는 전통 예술 보존과 함께 한-북마리아나 간 폭넓은 문화 교류가 이루어지는 중심지입니다.
+        </p>
+      </div>
+    </div>
+
+    <!-- 핵심 정보 요약 팩트 카드 -->
+    <div class="cnmi-facts-grid">
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h4 class="lang-text" data-kr="수도 & 행정" data-en="Capital & Status">수도 & 행정</h4>
+        <p class="lang-text" data-kr="수도: 사이판(Saipan)<br>미국 연방 자치령 (Commonwealth)" data-en="Capital: Saipan<br>U.S. Commonwealth">수도: 사이판(Saipan)<br>미국 연방 자치령 (Commonwealth)</p>
+      </div>
+
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fa-solid fa-users"></i></div>
+        <h4 class="lang-text" data-kr="주요 원주민 & 언어" data-en="People & Languages">주요 원주민 & 언어</h4>
+        <p class="lang-text" data-kr="차모로족, 캐롤리니안족<br>공용어: 영어, 차모로어, 캐롤리니어" data-en="Chamorro, Carolinian<br>English, Chamorro, Carolinian">차모로족, 캐롤리니안족<br>공용어: 영어, 차모로어, 캐롤리니어</p>
+      </div>
+
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fa-solid fa-sun"></i></div>
+        <h4 class="fact-title lang-text" data-kr="기후 및 자연" data-en="Climate & Nature">기후 및 자연</h4>
+        <p class="lang-text" data-kr="연평균 27°C 열대 해양성 기후<br>마리아나 해구 접경" data-en="Avg 27°C Tropical Climate<br>Adjacent to Mariana Trench">연평균 27°C 열대 해양성 기후<br>마리아나 해구 접경</p>
+      </div>
+
+      <div class="fact-card">
+        <div class="fact-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h4 class="lang-text" data-kr="한국과의 연대" data-en="Bond with Korea">한국과의 연대</h4>
+        <p class="lang-text" data-kr="활발한 문화·관광 교류 및 역사적 깊은 연대감 형성" data-en="Active cultural exchange and historical partnership">활발한 문화·관광 교류 및 역사적 깊은 연대감 형성</p>
+      </div>
+    </div>
+
+    <!-- 외부 관련 기관 및 관광 안내 사이트 바로가기 (신규 추가) -->
+    <div class="external-links-section">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <h3 class="lang-text" style="font-size: 1.4rem; color: var(--primary-green);" data-kr="관련 기관 및 관광 정보 사이트 바로가기" data-en="Official Related External Links">관련 기관 및 관광 정보 사이트 바로가기</h3>
+        <p class="lang-text" style="color: var(--text-muted); font-size: 0.9rem;" data-kr="북마리아나 제도에 대한 더 자세한 공식 문화·관광 정보를 외부 사이트에서 확인하실 수 있습니다." data-en="Discover more official culture and travel information through our partners.">북마리아나 제도에 대한 더 자세한 공식 문화·관광 정보를 외부 사이트에서 확인하실 수 있습니다.</p>
+      </div>
+
+      <div class="external-links-grid">
+        <!-- 링크 1: 마리아나 관광청 한국사무소 -->
+        <div class="ext-link-card">
+          <div>
+            <div class="ext-link-header">
+              <i class="fa-solid fa-plane-departure"></i>
+              <h4>마리아나 관광청 한국사무소</h4>
+            </div>
+            <p class="lang-text" 
+               data-kr="사이판, 티니안, 로타의 여행 정보 및 현지 문화 이벤트를 한국어로 공식 안내합니다." 
+               data-en="Official Korean guide for travel and cultural events in Saipan, Tinian, and Rota.">
+              사이판, 티니안, 로타의 여행 정보 및 현지 문화 이벤트를 한국어로 공식 안내합니다.
+            </p>
+          </div>
+          <a href="https://mymarianas.co.kr/" target="_blank" rel="noopener noreferrer" class="ext-btn">
+            <span>방문하기</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- 링크 2: CNMI 커뮤니티 및 문화부 -->
+        <div class="ext-link-card">
+          <div>
+            <div class="ext-link-header">
+              <i class="fa-solid fa-landmark"></i>
+              <h4>CNMI 커뮤니티문화부 (DCCA)</h4>
+            </div>
+            <p class="lang-text" 
+               data-kr="북마리아나 제도 정부의 커뮤니티 및 문화 유산 관리 공식 부서 웹사이트입니다." 
+               data-en="Official website of the CNMI Department of Community and Cultural Affairs.">
+              북마리아나 제도 정부의 커뮤니티 및 문화 유산 관리 공식 부서 웹사이트입니다.
+            </p>
+          </div>
+          <a href="https://cnmidcca.org/default.asp?secID=13" target="_blank" rel="noopener noreferrer" class="ext-btn">
+            <span>방문하기</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <!-- 링크 3: Visit The USA (북마리아나) -->
+        <div class="ext-link-card">
+          <div>
+            <div class="ext-link-header">
+              <i class="fa-solid fa-compass"></i>
+              <h4>Visit The USA - 북마리아나</h4>
+            </div>
+            <p class="lang-text" 
+               data-kr="미국 공식 관광청에서 제공하는 북마리아나 제도의 관광 명소 및 스토리 가이드입니다." 
+               data-en="Official U.S. Tourism guide featuring attractions and stories of Northern Mariana Islands.">
+              미국 공식 관광청에서 제공하는 북마리아나 제도의 관광 명소 및 스토리 가이드입니다.
+            </p>
+          </div>
+          <a href="https://www.visittheusa.com/ko/destinations/northern-mariana-islands/" target="_blank" rel="noopener noreferrer" class="ext-btn">
+            <span>방문하기</span> <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -602,7 +869,7 @@
     </div>
   </section>
 
-  <!-- NEWS SECTION (새로 추가된 메뉴) -->
+  <!-- NEWS SECTION -->
   <section id="news" style="background: var(--accent-soft-green); max-width: 100%; padding: 7rem 6%;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <div class="section-title">
@@ -611,7 +878,6 @@
       </div>
       
       <div class="news-grid">
-        <!-- 뉴스 카드 1 -->
         <div class="news-card">
           <div>
             <div class="news-date"><i class="fa-regular fa-calendar"></i> 2026.06.30</div>
@@ -629,7 +895,6 @@
           <a href="#" class="news-link lang-text" data-kr="자세히 보기 →" data-en="Read More →">자세히 보기 →</a>
         </div>
 
-        <!-- 뉴스 카드 2 -->
         <div class="news-card">
           <div>
             <div class="news-date"><i class="fa-regular fa-calendar"></i> 2026.06.26</div>
@@ -647,7 +912,6 @@
           <a href="#" class="news-link lang-text" data-kr="자세히 보기 →" data-en="Read More →">자세히 보기 →</a>
         </div>
 
-        <!-- 뉴스 카드 3 -->
         <div class="news-card">
           <div>
             <div class="news-date"><i class="fa-regular fa-calendar"></i> 2026.06.25</div>
