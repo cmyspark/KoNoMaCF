@@ -1,1 +1,17 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- 메인 페이지 -->
+  <url>
+    <lochttps://github.com/cmyspark/KoNoMaCF</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- 서브 페이지 (필요한 경우 복사해서 추가) -->
+  <url>
+    <loc>https://username.github.io/repository-name/about.html</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
